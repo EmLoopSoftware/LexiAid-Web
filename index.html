@@ -1,24 +1,41 @@
 <head>
     <title>LexiAid Sign Up</title>
-    <style>
-        body,html{padding:0;margin:0}
-        html{font-family: 'Source Code Pro', monospace;background:#5AAAD3;max-height:100vh; color: #FFFFFF;}
-    </style>
 
+
+    <link rel="stylesheet" type='text/css' href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600;700&display=swap" rel="stylesheet">
+    <script>
+        window.addEventListener("load", function() {
+        const form = document.getElementById('signup-form');
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+            method: 'POST',
+            body: data,
+            })
+            .then(() => {
+            alert("Success!");
+            })
+        });
+        });
+    </script>
 </head>
 
 
 <body>
-    <h1>Sign Up for LexiAid News!</h1>
+    <h1>LexiAid</h1>
+    <h2>Coming Soon.</h2>
 
-    <form 
-  method="POST" 
-  action="https://script.google.com/macros/s/AKfycbzoL3PWNf6KY5ifzONtmHGocZy4HTlJ1WUgZj-PDZQEzrcTEbEELkU-uxeN7cJMyvy-yA/exec"
->
+    <form method="POST" 
+    action="https://script.google.com/macros/s/AKfycbzoL3PWNf6KY5ifzONtmHGocZy4HTlJ1WUgZj-PDZQEzrcTEbEELkU-uxeN7cJMyvy-yA/exec"
+    id="signup-form">
   <input name="Email" type="email" placeholder="Email" required>
   <input name="Name" type="text" placeholder="Name" required>
   <button type="submit">Send</button>
 </form>
 
 </body>
+
+<footer>&copy; 2025 <a href="https://rkumar.xyz" target="_blank">Rahul Kumar</a> and <a href="https://www.linkedin.com/in/antonia25" target="_blank">Antonia Hill</a>. All rights reserved. <a href="mailto:hello@mloop.xyz">hello@emloop.xyz</a></footer>

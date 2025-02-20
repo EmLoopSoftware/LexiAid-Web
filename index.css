@@ -1,0 +1,31 @@
+body,html{padding:0;margin:0}
+html{font-family: 'Source Code Pro', monospace;background:#1a2033;max-height:100vh; color: #FFFFFF;}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+}
+h1 {font-size: 6rem; margin-bottom: 0;}
+h2{font-size: 3rem;}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    color: #808080;
+}
+a {color: #808080;}
+a:hover {color: #a4a4a4;}
